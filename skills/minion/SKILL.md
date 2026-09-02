@@ -1,6 +1,6 @@
 ---
 name: minion
-description: Start, work with, and close a Herdr minion, one agent running in its own tab whose work stays this session's responsibility. Use when delegating a task to a background coding agent, following up on or interrupting one that is already running, checking how much context headroom it has left, or closing one out. Requires HERDR_ENV=1.
+description: Start, work with, and close a Herdr minion. Use when delegating a task to a background coding agent, following up on or interrupting a running one, checking its context headroom, or closing one out. Requires HERDR_ENV=1.
 ---
 
 # Minion
@@ -13,7 +13,7 @@ test "${HERDR_ENV:-}" = 1
 
 If that fails, say you are not running inside Herdr and stop.
 
-For any CLI syntax not spelled out below, call the Skill tool with `herdr`.
+Reach Herdr through the `herdr` CLI only; any MCP minion tools available in context are out of scope here. For CLI syntax not spelled out below, call the Skill tool with `herdr`.
 
 ## Name
 
