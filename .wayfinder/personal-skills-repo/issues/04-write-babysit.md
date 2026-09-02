@@ -8,13 +8,13 @@ Leave it for Mihai to review with `writing-for-agents`.
 
 **Blocked by:** 03
 
-**Status:** ready-for-agent
+**Status:** ready-for-review
 
 **Type:** task
 
-- [ ] `skills/babysit/SKILL.md` exists with one generic loop, no minion mechanics inlined
-- [ ] The three context files carry their own state source, settled states, cadence and permitted actions
-- [ ] The approval allowlist and the wake-the-human rule are written as 02 decided
-- [ ] The watchlist is read on start, added to on a new resource, and never used for run state
-- [ ] Installs into the same throwaway repo for all three harnesses
-- [ ] Flagged to Mihai for review with `writing-for-agents`
+- [x] `skills/babysit/SKILL.md` exists with one generic loop, no minion mechanics inlined
+- [x] The three context files carry their own state source, settled states, cadence and permitted actions
+- [x] The approval allowlist and the wake-the-human rule are written as 02 decided
+- [x] The watchlist is read on start, added to on a new resource, and never used for run state
+- [x] Installs into the same throwaway repo for all three harnesses
+- [x] Flagged to Mihai for review with `writing-for-agents`
