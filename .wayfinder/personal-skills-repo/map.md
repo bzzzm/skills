@@ -43,7 +43,7 @@ All four are installed globally in `~/.agents/skills/`, along with 36 others.
 
 ## Not yet specified
 
-- **Which further personal skills to write.** The inventory conversation Mihai flagged for after the scaffold exists. Likely to graduate into several tickets once the conventions are proven by `minion` and `babysit`.
+- **Which further personal skills to write**, beyond [Setup Mihaim](../setup-mihaim/map.md) (its own map now, charted 2026-09-03). The rest of the inventory conversation Mihai flagged for after the scaffold exists.
 - **Publishing.** Local-path install is the route for now; Gitea (mono already uses one) or a private GitHub repo is the backup. Graduates if a second machine or another person needs these skills. A Claude Code plugin manifest only becomes possible once there is a remote.
 - **Whether mono's five repo-coupled skills ever come back.** `arch`, `helm-manager`, `homeassistant`, `kubernetes` and `setup-home` stay in mono for now. If a second cluster or a second home repo appears, the portability question reopens.
 
