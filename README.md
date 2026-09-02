@@ -30,7 +30,8 @@ npx skills add ~/work/skills --list
 
 ## Skills
 
-- `minion`: start, work with, and close a Herdr minion. `babysit` is landing next.
+- `minion`: start, work with, and close a Herdr minion.
+- `babysit`: watch a minion, a changelist, or an issue until it settles, spawning a minion for anything that needs technical action.
 
 ## Working in this repo
 
