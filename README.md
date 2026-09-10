@@ -32,6 +32,7 @@ npx skills add ~/work/skills --list
 
 - `minion`: start, work with, and close a Herdr minion.
 - `babysit`: watch a minion, a changelist, or an issue until it settles, spawning a minion for anything that needs technical action.
+- `diagrams`: draw architecture diagrams and flowcharts as PNG and SVG with the Python `diagrams` library.
 
 ## Working in this repo
 
