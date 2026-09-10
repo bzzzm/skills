@@ -1,0 +1,40 @@
+id = "mihai.workspace-env"
+name = "Workspace Env"
+version = "0.1.0"
+# `workspace_cwd` in the plugin invocation context, which the creation hook caches.
+min_herdr_version = "0.7.5"
+platforms = ["linux", "macos"]
+description = "Export HERDR_WORKSPACE, the path of the workspace a pane belongs to, into every Herdr shell."
+
+# Herdr injects HERDR_WORKSPACE_ID, HERDR_TAB_ID and HERDR_PANE_ID into panes, and a
+# plugin manifest has no way to add to that list. So the variable is exported by
+# shell/herdr-workspace-env.sh, sourced from the user's shell rc; see README.md.
+#
+# The one job only a plugin can do is the cache below. A freshly created workspace is
+# absent from ~/.config/herdr/session.json for a while (verified: three consecutive
+# reads right after `herdr workspace create` all missed), and `herdr worktree list`
+# answers only for git workspaces. The creation events carry the path in their context,
+# so the hook records it the moment the workspace is born.
+#
+# Only creation events are cached. `workspace.focused` also carries workspace_cwd, but
+# there it tracks the focused pane's cwd rather than the workspace identity, so caching
+# it would poison the entry.
+[[events]]
+on = "workspace.created"
+command = ["sh", "bin/cache-workspace-path.sh"]
+
+[[events]]
+on = "worktree.created"
+command = ["sh", "bin/cache-workspace-path.sh"]
+
+[[events]]
+on = "worktree.opened"
+command = ["sh", "bin/cache-workspace-path.sh"]
+
+# Prints which link of the resolution chain answers for the focused workspace, and what
+# it answered. Read the output with `herdr plugin log list --plugin mihai.workspace-env`.
+[[actions]]
+id = "show"
+title = "Workspace Env: show resolved path"
+contexts = ["workspace"]
+command = ["sh", "bin/show.sh"]

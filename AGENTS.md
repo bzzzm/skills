@@ -4,7 +4,7 @@ Mihai's own agent skills, in one flat tree, installed into a repo or a harness w
 
 ## What lives here
 
-Only skills Mihai wrote. Third-party skills (`herdr`, `unslop`, the `mattpocock/skills` set) are installed into the repos that use them, straight from their sources. A copy pasted in here would go stale with nowhere to send a fix.
+Only things Mihai wrote. Third-party skills (`herdr`, `unslop`, the `mattpocock/skills` set) are installed into the repos that use them, straight from their sources. A copy pasted in here would go stale with nowhere to send a fix.
 
 ## Layout
 
@@ -15,6 +15,8 @@ skills/<name>/SKILL.md
 One directory per skill, flat, no buckets. A skill's own reference files sit beside its `SKILL.md` and are reached by a relative link from it.
 
 Buckets become worth it when the list stops being scannable in one screen, or when one group needs to install differently from the rest. Until then the flat tree costs nothing, and promoting later is a `git mv`.
+
+`herdr-plugins/<name>/` sits beside `skills/`, holding Herdr plugins Mihai wrote. They are not skills: `npx skills add` never sees them, and each is installed on its own with `herdr plugin link`. Its own `README.md` is the install instruction.
 
 ## Frontmatter
 
